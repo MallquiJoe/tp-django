@@ -20,6 +20,6 @@ from polls import views
 
 urlpatterns = [
     path('polls/', include("polls.urls")),
-    path('', views.index, name='index'), # Si no agrego esto me sale error 404. esta para acceder a la url raiz
+    path('', views.IndexView.as_view(), name='index'), # Si no agrego esto me sale error 404. esta para acceder a la url raiz
     path('admin/', admin.site.urls),
 ]
